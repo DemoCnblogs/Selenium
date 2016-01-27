@@ -1,10 +1,5 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -35,11 +30,16 @@ namespace Demo.SeleniumTest
             IWebDriver driver = new FirefoxDriver();
             driver.Url = "http://www.cnblogs.com";
             driver.Manage().Window.Maximize();
-            var title = driver.Title;
-            var currentWinHandle = driver.CurrentWindowHandle;
-            var winHandles = driver.WindowHandles;
-            var pageSource = driver.PageSource;
 
+            _output.WriteLine("Step 02 : 获取并输出部分页面信息。");
+            _output.WriteLine(string.Format("Current window handle: {0}", driver.CurrentWindowHandle));
+            _output.WriteLine(string.Format("Window handle count: {0}", driver.WindowHandles.Count));
+            _output.WriteLine(string.Format("Current window title: {0}", driver.Title));
+
+            _output.WriteLine("Step 03 : 验证博客园站点的 Title 是否正确。");
+            Assert.Equal<string>("博客园 - 开发者的网上家园", driver.Title);
+
+            _output.WriteLine("Step 04 : 关闭当前页面。");
             driver.Close();
         }
     }

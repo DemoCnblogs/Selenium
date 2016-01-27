@@ -14,4 +14,4 @@ obj/
 
 !/BrowserDriver/*
 SourceCode/.localhistory
-!/SourceCode/.nuget/*
+!/.nuget/*
