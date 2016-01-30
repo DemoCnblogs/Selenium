@@ -80,7 +80,7 @@
     <Compile Include="TestCase\Lesson03_FindElement.cs" />
     <Compile Include="TestCase\Lesson01_VisitCnblogs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestCase\Lesson04_SeleniumAPI.cs" />
+    <Compile Include="TestCase\Lesson04_05_SeleniumAPI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
