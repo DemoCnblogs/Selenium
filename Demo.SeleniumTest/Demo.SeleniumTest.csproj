@@ -83,6 +83,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestCase\Lesson04_05_SeleniumAPI.cs" />
     <Compile Include="TestCase\Lesson06_TestFlowControl.cs" />
+    <Compile Include="TestCase\Lesson07_WindowProcess.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
